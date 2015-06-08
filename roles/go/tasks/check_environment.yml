@@ -18,7 +18,7 @@
 
 - name: echo go_task_installed
   debug:
-    msg="go_task_installed={{ go_task_installed }}"
+    var=go_task_installed
   when: go_task_installed is defined
   tags:
     - debug
@@ -30,7 +30,7 @@
 
 - name: echo go_installed
   debug:
-    msg="go_installed={{ go_installed }}"
+    var=go_installed
   when: go_installed is defined
   tags:
     - debug
@@ -46,7 +46,7 @@
 
 - name: echo go_task_version
   debug:
-    msg="go_task_version={{ go_task_version }}"
+    var=go_task_version
   when: go_task_version is defined
   tags:
     - debug
@@ -59,14 +59,14 @@
 
 - name: echo go_version_installed
   debug:
-    msg="go_version_installed={{ go_version_installed }}"
+    var=go_version_installed
   when: go_version_installed is defined
   tags:
     - debug
 
 - name: echo go_version_string
   debug:
-    msg="go_version_string={{ go_version_string }}"
+    var=go_version_string
   when: go_version_string is defined
   tags:
     - debug
