@@ -1,7 +1,7 @@
 ---
-# file: go/defaults/debian.yml
+# file: go/defaults/ubuntu.yml
 #
-# Default variables for Debian-based Linux distributions.
+# Default variables for Ubuntu Linux distributions.
 #
 
 go_cache_valid_time: 3600
