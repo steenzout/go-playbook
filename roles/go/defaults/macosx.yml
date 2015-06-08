@@ -1,0 +1,7 @@
+---
+# file: go/defaults/macosx.yml
+#
+# Default variables for MacOSX.
+#
+
+go_os_supported: yes
