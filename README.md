@@ -3,7 +3,6 @@
 [![License](https://img.shields.io/badge/license-New%20BSD-blue.svg?style=flat)](https://raw.githubusercontent.com/mediaFORGE/utahgophers-go-playbook/master/LICENSE)
 [![Build Status](https://travis-ci.org/mediaFORGE/utahgophers-go-playbook.svg?branch=master)](https://travis-ci.org/mediaFORGE/utahgophers-go-playbook)
 
-[![Platform](http://img.shields.io/badge/platform-debian-a80030.svg?style=flat)](#)
 [![Platform](http://img.shields.io/badge/platform-macosx-000000.svg?style=flat)](#)
 [![Platform](http://img.shields.io/badge/platform-ubuntu-dd4814.svg?style=flat)](#)
 
