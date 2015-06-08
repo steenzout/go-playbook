@@ -1,0 +1,7 @@
+---
+# file: roles/go/tests/vars/macosx.yml
+#
+# MacOSX
+#
+
+expected_go_version: '1.4.2'
