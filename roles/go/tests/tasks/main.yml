@@ -34,6 +34,8 @@
 - name: register result_go_version with host installed Go version
   shell: "go version | awk '{ print $3 }' | cut -c 3- "
   register: result_go_version
+  environment:
+    GOPATH: "{{ go_path }}"
   changed_when: no
 
 - name: is installed Go version correct?
