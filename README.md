@@ -40,7 +40,7 @@ To test against a specific test Vagrant box:
 ## Changelog
 
 - v1.0.0 : 8 Jun 2015
-    - installation of Go on Debian-based Linux distributions using apt
+    - installation of Go on Ubuntu Linux distributions using apt
     - installation of Go on MacOSX systems using macports
 
 
