@@ -1,0 +1,45 @@
+---
+# file: go/roles/tasks/debug.yml
+#
+# Task that prints variable debug information.
+#
+
+- name: echo go_cache_valid_time
+  debug:
+    var=go_cache_valid_time
+  when: go_cache_valid_time is defined
+
+- name: echo go_installed
+  debug:
+    var=go_installed
+  when: go_installed is defined
+
+- name: echo go_path
+  debug:
+    var=go_path
+  when: go_path is defined
+
+- name: echo go_os_supported
+  debug:
+    var=go_os_supported
+  when: go_os_supported is defined
+
+- name: echo go_state
+  debug:
+    var=go_state
+  when: go_state is defined
+
+- name: echo go_version_build
+  debug:
+    var=go_version_build
+  when: go_version_build is defined
+
+- name: echo go_version_installed
+  debug:
+    var=go_version_installed
+  when: go_version_installed is defined
+
+- name: echo go_version_string
+  debug:
+    var=go_version_string
+  when: go_version_string is defined

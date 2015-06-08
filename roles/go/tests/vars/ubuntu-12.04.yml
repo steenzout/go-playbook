@@ -1,0 +1,7 @@
+---
+# file: roles/go/tests/vars/ubuntu-12.04.yml
+#
+# Ubuntu Precise 12.04
+#
+
+expected_go_version: '1.2.1'

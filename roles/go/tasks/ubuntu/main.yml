@@ -1,0 +1,41 @@
+---
+# file: roles/go/tasks/debian/main.yml
+
+- name: include trusty main universe repository
+  apt_repository:
+    repo='deb http://us.archive.ubuntu.com/ubuntu trusty main universe'
+    state=present
+  when: ansible_distribution | lower == 'ubuntu' and ( ansible_distribution_version == '10.04' or ansible_distribution_version == '12.04')
+  changed_when: false
+  sudo: yes
+
+- name: install packages
+  apt:
+    name="{{ item }}"
+    update_cache=yes
+    cache_valid_time="{{ go_cache_valid_time }}"
+    state="{{ go_state }}"
+  sudo: yes
+  with_items:
+    - golang
+    - golang-go.tools
+
+- name: remove trusty main universe repository
+  apt_repository:
+    repo='deb http://us.archive.ubuntu.com/ubuntu trusty main universe'
+    state=absent
+  when: ansible_distribution | lower == 'ubuntu' and ( ansible_distribution_version == '10.04' or ansible_distribution_version == '12.04')
+  changed_when: false
+  sudo: yes
+
+- name: create directories under GOPATH
+  file:
+    path="{{ go_path }}/{{ item }}"
+    mode=0755
+    state=directory
+  sudo: no
+  with_items:
+    - bin
+    - pkg
+    - src
+    - doc

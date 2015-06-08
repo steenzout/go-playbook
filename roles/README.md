@@ -9,7 +9,16 @@
 
 [![Project Stats](https://www.openhub.net/p/mediaFORGE-utahgophers-go-playbook/widgets/project_thin_badge.gif)](https://www.openhub.net/p/mediaFORGE-utahgophers-go-playbook/)
 
-Playbook to setup Go in Ubuntu and OSX environments.
+Ansible role to setup Go in Ubuntu and OSX environments.
+
+
+## Tests
+
+| Family | Distribution | Version | Test Status |
+|:-:|:-:|:-:|:-:|
+| Debian | Ubuntu  | Precise | [![x86](http://img.shields.io/badge/x86-n/a-cccccc.svg?style=flat)](#) [![x86_64](http://img.shields.io/badge/x86_64-n/a-cccccc.svg?style=flat)](#)  |
+| Debian | Ubuntu  | Trusty  | [![x86](http://img.shields.io/badge/x86-n/a-cccccc.svg?style=flat)](#) [![x86_64](http://img.shields.io/badge/x86_64-n/a-cccccc.svg?style=flat)](#) |
+| Debian | Ubuntu  | Vivid   | [![x86](http://img.shields.io/badge/x86-n/a-cccccc.svg?style=flat)](#) [![x86_64](http://img.shields.io/badge/x86_64-n/a-cccccc.svg?style=flat)](#) |
 
 
 ## Requirements
@@ -32,10 +41,6 @@ None.
 An example to setup Go on localhost.
 
     $ ansible-playbook -i localhost, --connection=local site.yml
-
-To test against a specific test Vagrant box:
- 
-    $ tox -- --box vivid64.vagrant.dev
 
 
 ## Changelog

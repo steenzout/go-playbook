@@ -1,0 +1,43 @@
+---
+# file: roles/go/tasks/main.yml
+#
+# tasks file
+#
+
+- name: check host environment
+  include: check_environment.yml
+
+## include OS family specific variables
+
+- name: include OS family/distribution specific variables
+  include_vars: "{{ item }}"
+  with_first_found:
+    - "../defaults/{{ ansible_distribution | lower }}-{{ ansible_distribution_version | lower }}.yml"
+    - "../defaults/{{ ansible_distribution | lower }}.yml"
+    - "../defaults/{{ ansible_os_family | lower }}.yml"
+
+- name: debug variables
+  include: debug.yml
+  tags:
+    - debug
+
+## include OS family/distribution specific task file
+
+- name: if ubuntu, include distribution specific task file
+  include: "ubuntu/main.yml"
+  when: ansible_distribution| lower == 'ubuntu'
+  tags:
+    - ubuntu
+    - go
+
+- name: if macosx, include family specific task file
+  include: "macosx/main.yml"
+  when: ansible_os_family| lower == 'macosx'
+  tags:
+    - macosx
+    - go
+
+- name: check if operating system is supported
+  fail:
+    msg: "The operating system ({{ ansible_os_family }}) of the target machine ({{ inventory_hostname }}) is not currently supported."
+  when: go_os_supported is not defined or not go_os_supported

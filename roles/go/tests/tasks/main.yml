@@ -1,0 +1,42 @@
+---
+# file: roles/go/tests/tasks
+#
+# Test tasks to verify role execution.
+#
+
+- name: include OS family/distribution specific test variables
+  include_vars: "{{ item }}"
+  with_first_found:
+    - "../vars/{{ ansible_distribution | lower }}-{{ ansible_distribution_version | lower }}.yml"
+    - "../vars/{{ ansible_distribution | lower }}.yml"
+    - "../vars/{{ ansible_os_family | lower }}.yml"
+
+- name: is go_installed fact set?
+  fail:
+    msg="go_installed fact is not defined!"
+  when: not go_installed is defined
+
+- name: is go_installed fact true?
+  fail:
+    msg="go_installed fact is false!"
+  when: not go_installed
+
+- name: is go_version_installed fact set?
+  fail:
+    msg="go_installed fact is not defined!"
+  when: not go_version_installed is defined
+
+- name: is go_version_installed value correct?
+  fail:
+    msg="go_version_installed value is {{ go_version_installed }} instead of {{ expected_go_version }}!"
+  when: go_version_installed != expected_go_version
+
+- name: register result_go_version with host installed Go version
+  shell: go version | awk '{ print $3 }' | cut -c 3-
+  register: result_go_version
+  changed_when: no
+
+- name: is installed Go version correct?
+  fail:
+    msg="version output was {{ result_go_version.stdout }} instead of {{ expected_go_version }}"
+  when: result_go_version.stdout != expected_go_version

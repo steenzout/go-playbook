@@ -1,0 +1,11 @@
+---
+# file: roles/go/defaults/main.yml
+#
+# defaults file
+#
+
+go_dir_source: '/usr/local/src'
+
+go_set_as_default: no
+
+go_version: 1.4.2

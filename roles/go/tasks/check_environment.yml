@@ -1,0 +1,72 @@
+---
+# file: roles/go/tasks/check_environment.yml
+#
+# task to set host facts:
+#   - Go is installed?
+#   - which Go version is installed?
+#
+
+# determine if Java is already installed
+
+- name: register go_installed
+  shell: "which go"
+  register: go_task_installed
+  ignore_errors: yes
+  changed_when: False
+# go_installed.rc == 0 : installed
+# go_installed.rc == 1 : not installed
+
+- name: echo go_task_installed
+  debug:
+    msg="go_task_installed={{ go_task_installed }}"
+  when: go_task_installed is defined
+  tags:
+    - debug
+
+- name: set fact go_installed
+  set_fact:
+    go_installed={{ go_task_installed.rc == 0 }}
+  changed_when: False
+
+- name: echo go_installed
+  debug:
+    msg="go_installed={{ go_installed }}"
+  when: go_installed is defined
+  tags:
+    - debug
+
+
+# determine which Go version is installed
+
+- name: if Java is installed, check version
+  shell: go version | awk '{ print $3 }' | cut -c 3-
+  when: go_installed
+  register: go_task_version
+  changed_when: False
+
+- name: echo go_task_version
+  debug:
+    msg="go_task_version={{ go_task_version }}"
+  when: go_task_version is defined
+  tags:
+    - debug
+
+- name: set fact go_installed_version
+  set_fact:
+    go_version_installed={{ go_task_version.stdout }}
+  when: go_installed
+  changed_when: False
+
+- name: echo go_version_installed
+  debug:
+    msg="go_version_installed={{ go_version_installed }}"
+  when: go_version_installed is defined
+  tags:
+    - debug
+
+- name: echo go_version_string
+  debug:
+    msg="go_version_string={{ go_version_string }}"
+  when: go_version_string is defined
+  tags:
+    - debug

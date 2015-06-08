@@ -1,0 +1,11 @@
+---
+# file: roles/go/tests/vagrant.yml
+
+- name: tests play
+  hosts: all
+  gather_facts: yes
+
+  roles:
+    - go
+    - { role: tests,
+        tags: test }

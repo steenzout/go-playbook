@@ -1,0 +1,7 @@
+---
+# file: roles/go/tests/vars/ubuntu-14.04.yml
+#
+# Ubuntu Trusty 14.04
+#
+
+expected_go_version: '1.2.1'

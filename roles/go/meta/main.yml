@@ -1,0 +1,27 @@
+---
+# file: roles/go/meta/main.yml
+#
+# meta file
+#
+galaxy_info:
+  author: Pedro Salgado
+  description: Role to install Go.
+  company: rakutenmarketing.com
+  license: BSD
+  min_ansible_version: 1.9.1
+  platforms:
+    - name: Debian
+      versions:
+        - jessie
+        - wheezy
+    - name: MacOSX
+      versions:
+        - 10.10
+    - name: Ubuntu
+      versions:
+        - vivid
+        - trusty
+        - precise
+  categories:
+    - development
+dependencies: []
