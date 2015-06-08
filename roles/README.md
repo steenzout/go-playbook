@@ -57,7 +57,7 @@ An example to setup Go on localhost.
 
 ## License
 
-[![License](https://img.shields.io/badge/license-New%20BSD-blue.svg?style=flat)](https://raw.githubusercontent.com/steenzout/go-playbook/master/LICENSE)
+[BSD](https://raw.githubusercontent.com/steenzout/go-playbook/master/LICENSE)
 
 
 ## Author Information
