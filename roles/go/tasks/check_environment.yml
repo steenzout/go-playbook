@@ -38,8 +38,8 @@
 
 # determine which Go version is installed
 
-- name: if Java is installed, check version
-  shell: go version | awk '{ print $3 }' | cut -c 3-
+- name: if Go is installed, check version
+  shell: "go version | awk '{ print $3 }' | cut -c 3- "
   when: go_installed
   register: go_task_version
   changed_when: False

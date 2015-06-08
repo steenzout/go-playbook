@@ -32,7 +32,7 @@
   when: go_version_installed != expected_go_version
 
 - name: register result_go_version with host installed Go version
-  shell: go version | awk '{ print $3 }' | cut -c 3-
+  shell: "go version | awk '{ print $3 }' | cut -c 3- "
   register: result_go_version
   changed_when: no
 
