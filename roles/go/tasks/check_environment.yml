@@ -6,7 +6,7 @@
 #   - which Go version is installed?
 #
 
-# determine if Java is already installed
+# determine if Go is already installed
 
 - name: register go_installed
   shell: "which go"
