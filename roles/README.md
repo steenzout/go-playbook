@@ -1,13 +1,12 @@
 # go
 
-[![License](https://img.shields.io/badge/license-New%20BSD-blue.svg?style=flat)](https://raw.githubusercontent.com/mediaFORGE/utahgophers-go-playbook/master/LICENSE)
-[![Build Status](https://travis-ci.org/mediaFORGE/utahgophers-go-playbook.svg?branch=master)](https://travis-ci.org/mediaFORGE/utahgophers-go-playbook)
+[![License](https://img.shields.io/badge/license-New%20BSD-blue.svg?style=flat)](https://raw.githubusercontent.com/steenzout/go-playbook/master/LICENSE)
+[![Build Status](https://travis-ci.org/steenzout/go-playbook.svg?branch=master)](https://travis-ci.org/steenzout/go-playbook)
 
-[![Platform](http://img.shields.io/badge/platform-debian-a80030.svg?style=flat)](#)
 [![Platform](http://img.shields.io/badge/platform-macosx-000000.svg?style=flat)](#)
 [![Platform](http://img.shields.io/badge/platform-ubuntu-dd4814.svg?style=flat)](#)
 
-[![Project Stats](https://www.openhub.net/p/mediaFORGE-utahgophers-go-playbook/widgets/project_thin_badge.gif)](https://www.openhub.net/p/mediaFORGE-utahgophers-go-playbook/)
+[![Project Stats](https://www.openhub.net/p/steenzout-go-playbook/widgets/project_thin_badge.gif)](https://www.openhub.net/p/steenzout-go-playbook/)
 
 [Ansible](http://ansible.com/) role to setup [Go](http://golang.org/) in Ubuntu and OSX environments.
 
@@ -58,7 +57,7 @@ An example to setup Go on localhost.
 
 ## License
 
-[![License](https://img.shields.io/badge/license-New%20BSD-blue.svg?style=flat)](https://raw.githubusercontent.com/mediaFORGE/utahgophers-go-playbook/master/LICENSE)
+[![License](https://img.shields.io/badge/license-New%20BSD-blue.svg?style=flat)](https://raw.githubusercontent.com/steenzout/go-playbook/master/LICENSE)
 
 
 ## Author Information
