@@ -51,7 +51,7 @@ To test against a specific test Vagrant box:
 
 ## License
 
-[![License](https://img.shields.io/badge/license-New%20BSD-blue.svg?style=flat)](https://raw.githubusercontent.com/mediaFORGE/utahgophers-go-playbook/master/LICENSE)
+[BSD](https://raw.githubusercontent.com/mediaFORGE/utahgophers-go-playbook/master/LICENSE)
 
 
 ## Author Information
