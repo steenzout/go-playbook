@@ -1,12 +1,12 @@
 # Golang playbook
 
-[![License](https://img.shields.io/badge/license-New%20BSD-blue.svg?style=flat)](https://raw.githubusercontent.com/mediaFORGE/utahgophers-go-playbook/master/LICENSE)
-[![Build Status](https://travis-ci.org/mediaFORGE/utahgophers-go-playbook.svg?branch=master)](https://travis-ci.org/mediaFORGE/utahgophers-go-playbook)
+[![License](https://img.shields.io/badge/license-New%20BSD-blue.svg?style=flat)](https://raw.githubusercontent.com/mediaFORGE/go-playbook/master/LICENSE)
+[![Build Status](https://travis-ci.org/mediaFORGE/go-playbook.svg?branch=master)](https://travis-ci.org/mediaFORGE/go-playbook)
 
 [![Platform](http://img.shields.io/badge/platform-macosx-000000.svg?style=flat)](#)
 [![Platform](http://img.shields.io/badge/platform-ubuntu-dd4814.svg?style=flat)](#)
 
-[![Project Stats](https://www.openhub.net/p/mediaFORGE-utahgophers-go-playbook/widgets/project_thin_badge.gif)](https://www.openhub.net/p/mediaFORGE-utahgophers-go-playbook/)
+[![Project Stats](https://www.openhub.net/p/mediaFORGE-go-playbook/widgets/project_thin_badge.gif)](https://www.openhub.net/p/mediaFORGE-go-playbook/)
 
 Playbook to setup Go in Ubuntu and OSX environments.
 
@@ -51,7 +51,7 @@ To test against a specific test Vagrant box:
 
 ## License
 
-[BSD](https://raw.githubusercontent.com/mediaFORGE/utahgophers-go-playbook/master/LICENSE)
+[BSD](https://raw.githubusercontent.com/mediaFORGE/go-playbook/master/LICENSE)
 
 
 ## Author Information
