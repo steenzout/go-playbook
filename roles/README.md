@@ -1,4 +1,4 @@
-# Golang playbook
+# go
 
 [![License](https://img.shields.io/badge/license-New%20BSD-blue.svg?style=flat)](https://raw.githubusercontent.com/mediaFORGE/utahgophers-go-playbook/master/LICENSE)
 [![Build Status](https://travis-ci.org/mediaFORGE/utahgophers-go-playbook.svg?branch=master)](https://travis-ci.org/mediaFORGE/utahgophers-go-playbook)
@@ -9,7 +9,7 @@
 
 [![Project Stats](https://www.openhub.net/p/mediaFORGE-utahgophers-go-playbook/widgets/project_thin_badge.gif)](https://www.openhub.net/p/mediaFORGE-utahgophers-go-playbook/)
 
-Ansible role to setup Go in Ubuntu and OSX environments.
+[Ansible](http://ansible.com/) role to setup [Go](http://golang.org/) in Ubuntu and OSX environments.
 
 
 ## Tests
@@ -17,7 +17,7 @@ Ansible role to setup Go in Ubuntu and OSX environments.
 | Family | Distribution | Version | Test Status |
 |:-:|:-:|:-:|:-:|
 | Darwin | MacOSX  | Yosemite | [![x86_64](http://img.shields.io/badge/x86_64-passed-006400.svg?style=flat)](#) |
-pdatedupdated test table results.| Debian | Ubuntu  | Precise  | [![x86_64](http://img.shields.io/badge/x86_64-passed-006400.svg?style=flat)](#) |
+| Debian | Ubuntu  | Precise  | [![x86_64](http://img.shields.io/badge/x86_64-passed-006400.svg?style=flat)](#) |
 | Debian | Ubuntu  | Trusty   | [![x86_64](http://img.shields.io/badge/x86_64-passed-006400.svg?style=flat)](#) |
 | Debian | Ubuntu  | Vivid    | [![x86_64](http://img.shields.io/badge/x86_64-passed-006400.svg?style=flat)](#) |
 
