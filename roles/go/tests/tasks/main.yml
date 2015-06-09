@@ -31,18 +31,6 @@
     msg="go_version_installed value is {{ go_version_installed }} instead of {{ expected_go_version }}!"
   when: go_version_installed != expected_go_version
 
-- name: debug Go environment
-  shell: "go env"
-  register: result_go_env
-  changed_when: no
-  tags:
-    - debug
-
-- debug:
-    var=result_go_env
-  tags:
-    - debug
-
 - name: register result_go_version with host installed Go version
   shell: "go version | awk '{ print $3 }' | cut -c 3- "
   register: result_go_version
