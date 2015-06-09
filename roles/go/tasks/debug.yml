@@ -47,6 +47,8 @@
 - name: register Go environment settings
   shell: go env
   register: result_go_env
+  environment:
+    GOROOT: /home/travis/.gimme/versions/go1.4.1.linux.amd64
   when: go_installed is defined and go_installed
   changed_when: no
 
