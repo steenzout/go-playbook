@@ -3,7 +3,7 @@ python: 2.7
 sudo: yes
 
 install:
-  - pip install tox
+  - sudo pip install tox
 
 script:
   - tox -e travis
