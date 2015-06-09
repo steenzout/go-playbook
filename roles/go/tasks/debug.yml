@@ -43,3 +43,13 @@
   debug:
     var=go_version_string
   when: go_version_string is defined
+
+- name: debug Go environment
+  shell: "go env"
+  register: result_go_env
+  when: go_installed is defined and go_installed
+  changed_when: no
+
+- debug:
+    var=result_go_env
+  when: go_installed is defined and go_installed
