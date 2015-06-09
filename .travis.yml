@@ -4,6 +4,8 @@ sudo: yes
 
 install:
   - env
+  - unset GOROOT
+  - env
   - pip install tox
 
 script:
