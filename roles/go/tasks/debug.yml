@@ -47,8 +47,6 @@
 - name: register Go environment settings
   shell: go env
   register: result_go_env
-  environment:
-    GOROOT: "{{ ansible_env.GOROOT }}"
   when: go_installed is defined and go_installed
   changed_when: no
 
