@@ -3,3 +3,5 @@
 #
 # defaults file
 #
+
+go_path: "{{ ansible_env.HOME }}/go"

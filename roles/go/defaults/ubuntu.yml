@@ -6,8 +6,6 @@
 
 go_cache_valid_time: 3600
 
-go_path: "{{ ansible_env.HOME }}/go"
-
 go_os_supported: yes
 
 go_state: latest
