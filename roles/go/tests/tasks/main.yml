@@ -34,8 +34,6 @@
 - name: debug Go environment
   shell: "go env"
   register: result_go_env
-  environment:
-    GOROOT: "/usr/lib/go"
   changed_when: no
   tags:
     - debug
