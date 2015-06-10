@@ -56,6 +56,11 @@ key="$1"
         BOX="$2"
         shift;;
 
+        --env)
+        # the test environment
+        ENV="$2"
+        shift;;
+
         --inventory)
         # the Ansible inventory in the form of a file or string "host,"
         INVENTORY="$2"
@@ -76,6 +81,8 @@ done
 
 # the name of the Vagrant box or host name
 BOX=${BOX:-localhost}
+# the name of the environment where this test is being executed against
+ENV=${ENV:-vagrant}
 # the Ansible inventory in the form of a file or string "host,"
 INVENTORY=${INVENTORY:-'localhost,'}
 # the path to the Ansible test playbook
@@ -85,7 +92,7 @@ LOGFILE="log/${BOX}_${VIRTUALENV_NAME}.log"
 
 EXTRA_ARGS=''
 if [ $BOX == "localhost" ]; then
-    EXTRA_ARGS="--connection=local --extra-vars idempotence=yes"
+    EXTRA_ARGS="--connection=local --extra-vars '{idempotence: yes, env: ${ENV}'"
 else
     EXTRA_ARGS="--u vagrant"
 fi
