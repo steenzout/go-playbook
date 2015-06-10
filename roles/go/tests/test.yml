@@ -1,11 +1,18 @@
 ---
-# file: roles/go/tests/vagrant.yml
+# file: roles/go/tests/test.yml
 
-- name: tests play
+- name: provisioning play
   hosts: all
   gather_facts: yes
 
   roles:
     - go
+
+- name: tests play
+  hosts: all
+  gather_facts: yes
+  tags: test
+
+  roles:
     - { role: tests,
-        tags: test }
+        when: idempotence is defined and idempotence }
