@@ -92,7 +92,7 @@ LOGFILE="log/${BOX}_${VIRTUALENV_NAME}.log"
 
 EXTRA_ARGS=''
 if [ $BOX == "localhost" ]; then
-    EXTRA_ARGS="--connection=local --extra-vars '{idempotence: yes, env: ${ENV}'"
+    EXTRA_ARGS="--connection=local --extra-vars \"idempotence=yes env=${ENV}\""
 else
     EXTRA_ARGS="--u vagrant"
 fi
