@@ -3,7 +3,7 @@
 #
 # Bash script to run idempotence tests.
 #
-# version: 1.2
+# version: 1.2.2
 #
 # usage:
 #
@@ -97,9 +97,7 @@ else
     EXTRA_ARGS="--u vagrant"
 fi
 
-echo ${EXTRA_ARGS}
 echo "[INFO] ${BOX} ${VIRTUALENV_NAME} running idempotence test..."
-echo "ansible-playbook -i ${INVENTORY} --limit ${BOX}, ${PLAYBOOK} ${EXTRA_ARGS}"
 ansible-playbook -i ${INVENTORY} --limit ${BOX}, ${EXTRA_ARGS} ${PLAYBOOK} 2>&1 | tee ${LOGFILE} | \
     grep "${BOX}" | grep -q "${PASS_CRITERIA}" && \
     echo -ne "[TEST] ${BOX} ${VIRTUALENV_NAME} idempotence : ${GREEN}PASS${NC}\n" || \

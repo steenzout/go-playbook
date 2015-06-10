@@ -42,4 +42,4 @@
 - name: is installed Go version correct?
   fail:
     msg="version output was {{ result_go_version.stdout }} instead of {{ expected_go_version }}"
-  when: result_go_version.stdout != expected_go_version and env != 'travis'
+  when: not env == 'travis' and result_go_version.stdout != expected_go_version
